@@ -97,10 +97,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp TAB  &kp LSHFT  &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp KP_PLUS
-        &trans   &kp LEFT   &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS
-&trans  &trans   &kp PG_UP  &trans    &kp PG_DN  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
-                            &trans    &trans     &trans      &mo 3     &kp NUMBER_0  &trans
+        &kp TAB  &kp LSHFT  &kp UP       &kp EQUAL  &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp KP_PLUS
+        &trans   &kp LEFT   &kp DOWN     &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS
+&trans  &trans   &trans     &kp PAGE_UP  &kp PG_DN  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp NUMBER_0
+                            &trans       &kp HOME   &kp END     &mo 3     &trans        &trans
             >;
         };
 
