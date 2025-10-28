@@ -30,7 +30,14 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        change_lang {
+            bindings = <&kp LS(LEFT_ALT)>;
+            key-positions = <0 1>;
+        };
+    };
 
     macros {
         gif: gif {
