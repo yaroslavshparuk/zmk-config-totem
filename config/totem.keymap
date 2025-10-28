@@ -36,6 +36,8 @@
         change_lang {
             bindings = <&kp LS(LEFT_ALT)>;
             key-positions = <0 1>;
+            layers = <0>;
+            timeout-ms = <60>;
         };
     };
 
