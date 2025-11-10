@@ -39,6 +39,11 @@
             layers = <0>;
             timeout-ms = <60>;
         };
+
+        compact_mode_in_zen {
+            bindings = <&kp F13>;
+            key-positions = <13 12>;
+        };
     };
 
     macros {
