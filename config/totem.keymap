@@ -111,10 +111,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &trans  &trans    &kp UP       &kp EQUAL  &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp KP_PLUS
-                &trans  &kp LEFT  &kp DOWN     &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS
-&kp LEFT_SHIFT  &trans  &trans    &kp PAGE_UP  &kp PG_DN  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp NUMBER_0
-                                  &trans       &trans     &trans      &mo 3     &kp HOME      &kp END
+                &trans  &trans    &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &trans
+                &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0
+&kp LEFT_SHIFT  &trans  &trans    &trans    &trans     &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH  &kp GRAVE
+                                  &trans    &trans     &trans      &mo 3     &kp HOME      &kp END
             >;
         };
 
@@ -139,7 +139,7 @@
             bindings = <
                 &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS      &kp ASTERISK  &kp PLUS    &kp MINUS
                 &trans    &trans  &trans    &trans    &trans       &kp C_MUTE    &kp C_PAUSE   &trans        &trans      &trans
-&kp LEFT_SHIFT  &trans    &trans  &trans    &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV    &kp C_NEXT  &kp BSLH   &kp GRAVE
+&kp LEFT_SHIFT  &trans    &trans  &trans    &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV    &kp C_NEXT  &trans     &trans
                                   &trans    &trans    &mo 3        &trans        &trans        &trans
             >;
         };
