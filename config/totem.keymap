@@ -42,22 +42,17 @@
 
         delete_word {
             bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <12 33>;
+            key-positions = <33 17>;
         };
 
         left_bracket {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <8 9>;
+            key-positions = <8 7>;
         };
 
         right_bracket {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <19 18>;
-        };
-
-        question_mark {
-            bindings = <&kp QUESTION>;
-            key-positions = <6 7>;
+            key-positions = <18 17>;
         };
     };
 
