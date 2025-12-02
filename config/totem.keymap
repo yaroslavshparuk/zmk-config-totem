@@ -40,14 +40,24 @@
             timeout-ms = <60>;
         };
 
-        compact_mode_in_zen {
-            bindings = <&kp F13>;
-            key-positions = <13 12>;
-        };
-
         delete_word {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <12 33>;
+        };
+
+        left_bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <13 14>;
+        };
+
+        right_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <15 16>;
+        };
+
+        question_mark {
+            bindings = <&kp QUESTION>;
+            key-positions = <6 7>;
         };
     };
 
