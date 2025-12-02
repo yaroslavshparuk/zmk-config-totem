@@ -44,6 +44,11 @@
             bindings = <&kp F13>;
             key-positions = <13 12>;
         };
+
+        delete_word {
+            bindings = <&kp LC(DELETE)>;
+            key-positions = <12 33>;
+        };
     };
 
     macros {
