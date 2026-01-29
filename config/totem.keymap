@@ -118,10 +118,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &trans  &kp LG(F23)  &kp UP    &kp EQUAL    &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp PRINTSCREEN
-                &trans  &kp LEFT     &kp DOWN  &kp RIGHT    &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0
-&kp LEFT_SHIFT  &trans  &trans       &trans    &kp LG(F24)  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH    &kp LEFT_SHIFT
-                                     &trans    &trans       &trans      &mo 3     &kp HOME      &kp END
+                &kp GRAVE  &kp LG(F23)  &kp UP    &kp EQUAL    &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp PRINTSCREEN
+                &trans     &kp LEFT     &kp DOWN  &kp RIGHT    &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0
+&kp LEFT_SHIFT  &trans     &trans       &trans    &kp LG(F24)  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH    &kp LEFT_SHIFT
+                                        &trans    &trans       &trans      &mo 3     &kp HOME      &kp END
             >;
         };
 
