@@ -51,6 +51,16 @@
             bindings = <&kp LC(DELETE)>;
             key-positions = <12 33>;
         };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <10 11>;
+        };
+
+        apostrophe {
+            bindings = <&kp APOSTROPHE>;
+            key-positions = <19 18>;
+        };
     };
 
     macros {
