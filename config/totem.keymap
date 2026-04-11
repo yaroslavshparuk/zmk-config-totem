@@ -64,7 +64,7 @@
 
         printscreen {
             bindings = <&kp PRINTSCREEN>;
-            key-positions = <2 3>;
+            key-positions = <3 1>;
         };
     };
 
