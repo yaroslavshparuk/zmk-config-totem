@@ -61,6 +61,11 @@
             bindings = <&kp APOSTROPHE>;
             key-positions = <19 18>;
         };
+
+        printscreen {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <2 4>;
+        };
     };
 
     macros {
