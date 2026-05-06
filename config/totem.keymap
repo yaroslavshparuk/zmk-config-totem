@@ -160,7 +160,7 @@
 
             bindings = <
                 &kp EXCL  &kp AT  &kp HASH       &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS      &kp ASTERISK  &kp PLUS    &kp MINUS
-                &trans    &trans  &kp PAGE_UP    &trans    &trans       &kp C_MUTE    &kp C_PAUSE   &trans        &trans      &trans
+                &trans    &trans  &kp PAGE_UP    &trans    &trans       &kp H         &kp J         &kp K         &kp L       &trans
 &kp LEFT_SHIFT  &trans    &trans  &kp PAGE_DOWN  &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV    &kp C_NEXT  &trans     &kp LEFT_SHIFT
                                   &trans         &trans    &mo 3        &trans        &trans        &trans
             >;
