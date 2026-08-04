@@ -1,5 +1,25 @@
 include:
+  # --- Dongle mode: Prospector is the central, both halves are peripherals ---
+  - board: xiao_ble//zmk
+    shield: totem_dongle dongle_screen
+    artifact-name: totem-prospector-dongle
+
   - board: xiao_ble//zmk
     shield: totem_left
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: totem-left-peripheral
+
+  # The right half is a peripheral in both modes, so this one file fits both.
   - board: xiao_ble//zmk
     shield: totem_right
+    artifact-name: totem-right
+
+  # --- Dongle-less fallback: left half is the central ---
+  - board: xiao_ble//zmk
+    shield: totem_left
+    artifact-name: totem-left-standalone
+
+  # --- Wipes all pairings/settings from any XIAO ---
+  - board: xiao_ble//zmk
+    shield: settings_reset
+    artifact-name: totem-settings-reset

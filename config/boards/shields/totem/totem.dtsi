@@ -29,16 +29,10 @@
     };
 
 
+    /* `compatible`, `row-gpios` and `col-gpios` are set in totem_left.overlay /
+       totem_right.overlay so that the dongle build can swap this out for a mock
+       kscan without dragging in the GPIO matrix driver. */
     kscan0: kscan_0 {
-        compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
-        
-        diode-direction = "col2row"; 
-        row-gpios
-            = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            ;
+        diode-direction = "col2row";
     };
 };
