@@ -4,6 +4,13 @@ include:
     shield: totem_dongle dongle_screen
     artifact-name: totem-prospector-dongle
 
+  # Same dongle, but logs to USB serial — for diagnosing the screen.
+  - board: xiao_ble//zmk
+    shield: totem_dongle dongle_screen
+    snippet: zmk-usb-logging
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000
+    artifact-name: totem-prospector-dongle-debug
+
   - board: xiao_ble//zmk
     shield: totem_left
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n

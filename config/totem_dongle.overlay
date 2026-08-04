@@ -1,0 +1,16 @@
+/*
+ * ZMK-config-level overlay for the dongle build. Unlike the shield overlay in
+ * config/boards/shields/totem/, this file is applied *after* the dongle_screen
+ * module's own board overlay, so it can retune nodes the module defines.
+ */
+
+/*
+ * YADS clocks the ST7789 at 30 MHz. carrefinho's Prospector firmware, on
+ * byte-for-byte identical wiring, uses 4 MHz — far more tolerant of
+ * hand-soldered jumpers and long traces. A display that never initialises
+ * (backlight on, nothing drawn) is the classic symptom of too fast an SPI
+ * clock, so start conservative.
+ */
+&st7789 {
+    mipi-max-frequency = <4000000>;
+};
