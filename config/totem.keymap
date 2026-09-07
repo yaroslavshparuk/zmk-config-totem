@@ -185,10 +185,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &bt BT_SEL 0  &kp F20  &kp F21  &kp F21  &kp F24    &trans  &kp F7  &kp F8  &kp F9  &kp F12
-            &bt BT_SEL 1  &kp F16  &kp F17  &kp F19  &kp F23    &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&bt BT_CLR  &bt BT_SEL 2  &kp F13  &kp F14  &kp F15  &kp F22    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                                   &trans   &trans   &trans     &trans  &trans  &trans
+            &bt BT_SEL 0  &kp F20  &kp F21  &kp F21  &kp F24    &bt BT_CLR_ALL  &kp F7  &kp F8  &kp F9  &kp F12
+            &bt BT_SEL 1  &kp F16  &kp F17  &kp F19  &kp F23    &trans          &kp F4  &kp F5  &kp F6  &kp F11
+&bt BT_CLR  &bt BT_SEL 2  &kp F13  &kp F14  &kp F15  &kp F22    &trans          &kp F1  &kp F2  &kp F3  &kp F10  &trans
+                                   &trans   &trans   &trans     &trans          &trans  &trans
             >;
         };
 
