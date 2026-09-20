@@ -1,0 +1,18 @@
+/*
+ * The OLED itself is board-specific, because the I2C bus label differs per
+ * controller (pro_micro_i2c on nice!nano, xiao_i2c on XIAO BLE). The display
+ * node therefore lives in boards/<board>.overlay, which each include
+ * dongle_oled.dtsi with DONGLE_OLED_I2C set to the right bus.
+ *
+ * Those file names must be the fully qualified board target with '/' replaced
+ * by '_' (nice_nano_nrf52840_zmk.overlay, not nice_nano.overlay) — Zephyr does
+ * not look for the bare board name. The chosen node below deliberately lives
+ * here rather than in the dtsi: if no board file matches, the build fails right
+ * away on an undefined 'oled' label instead of much later in the display code.
+ */
+
+/ {
+    chosen {
+        zephyr,display = &oled;
+    };
+};

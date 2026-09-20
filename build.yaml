@@ -1,5 +1,33 @@
 include:
+  # Standalone Bluetooth mode: left is central, right is peripheral.
+  # No dongle needed — flash these when you forget the dongle.
   - board: xiao_ble//zmk
     shield: totem_left
   - board: xiao_ble//zmk
     shield: totem_right
+
+  # Dongle mode: nice!nano central, plain and OLED variants.
+  - board: nice_nano/nrf52840/zmk
+    shield: totem_dongle
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+
+  # Dongle with a 128x64 I2C OLED driven by englmaxi/zmk-dongle-display
+  - board: nice_nano/nrf52840/zmk
+    shield: totem_dongle dongle_oled dongle_display
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: totem_dongle_oled_nice_nano
+
+  # Halves as peripherals for dongle mode. The right half is a peripheral
+  # either way, so its default firmware above works in both modes — only the
+  # left half needs a separate peripheral build for use with the dongle.
+  - board: xiao_ble//zmk
+    shield: totem_left
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: totem_left_peripheral
+
+  - board: xiao_ble//zmk
+    shield: settings_reset
+  - board: nice_nano/nrf52840/zmk
+    shield: settings_reset

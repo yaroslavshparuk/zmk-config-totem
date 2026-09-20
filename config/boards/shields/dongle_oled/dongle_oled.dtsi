@@ -1,0 +1,38 @@
+/*
+ * Shared OLED definition for the dongle display.
+ *
+ * Include this from a board-specific overlay after defining DONGLE_OLED_I2C
+ * to the label of the I2C bus the display is wired to.
+ *
+ * Defaults target a 1.3" 128x64 SH1106 at address 0x3c. For other panels:
+ *   0.96" SSD1306 -> compatible = "solomon,ssd1306fb"; segment-offset = <0>;
+ *   0.91" 128x32  -> height = <32>; multiplex-ratio = <31>; add com-sequential;
+ *                    and set CONFIG_LV_Z_VDB_SIZE=32 (see dongle_oled.conf)
+ *
+ * The matching chosen zephyr,display node lives in dongle_oled.overlay.
+ */
+
+&DONGLE_OLED_I2C {
+    status = "okay";
+
+    oled: sh1106@3c {
+        compatible = "sinowealth,sh1106";
+        reg = <0x3c>;
+        width = <128>;
+        height = <64>;
+        /* SH1106 RAM is 132 columns wide; centre the 128-pixel panel. */
+        segment-offset = <2>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <63>;
+        /*
+         * segment-remap (columns right-to-left) and com-invdir (rows
+         * bottom-to-top) together rotate the image 180 degrees. The 3D printed
+         * case mounts the panel upside down relative to that, so both are left
+         * off. Re-enable the pair if the case is ever flipped; enabling only one
+         * of them mirrors the image rather than rotating it.
+         */
+        inversion-on;
+        prechargep = <0x22>;
+    };
+};

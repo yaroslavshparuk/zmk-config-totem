@@ -1,0 +1,5 @@
+/* OLED on the Seeed XIAO BLE I2C pins: D4 = SDA (P0.04), D5 = SCL (P0.05). */
+
+#define DONGLE_OLED_I2C xiao_i2c
+
+#include "../dongle_oled.dtsi"
