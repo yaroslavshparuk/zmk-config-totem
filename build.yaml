@@ -7,16 +7,15 @@ include:
     shield: totem_right
 
   # Dongle mode: nice!nano central, plain and OLED variants.
+  # NOTE: no ZMK Studio here — Studio requires a physical layout plus a
+  # studio-unlock combo in the keymap (see zmk.dev/docs/features/studio),
+  # which Totem does not have yet. The dongle works fully without it.
   - board: nice_nano/nrf52840/zmk
     shield: totem_dongle
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
 
   # Dongle with a 128x64 I2C OLED driven by englmaxi/zmk-dongle-display
   - board: nice_nano/nrf52840/zmk
     shield: totem_dongle dongle_oled dongle_display
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: totem_dongle_oled_nice_nano
 
   # Halves as peripherals for dongle mode. The right half is a peripheral
