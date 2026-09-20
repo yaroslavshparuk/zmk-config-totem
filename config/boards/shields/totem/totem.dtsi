@@ -29,16 +29,15 @@
     };
 
 
+    /* NOTE: kscan gpios are board-specific and live in totem_left.overlay /
+     * totem_right.overlay. Keep this dtsi free of GPIO references so the
+     * totem_dongle shield (built for nice!nano) can include it. If you add
+     * or reorder keys in default_transform below, the dongle picks it up
+     * automatically via its #include. */
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
-        
-        diode-direction = "col2row"; 
-        row-gpios
-            = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            ;
+
+        diode-direction = "col2row";
     };
 };
